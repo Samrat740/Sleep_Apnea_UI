@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { HeartPulse, Brain, ClipboardList, AlertCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Mic } from "lucide-react";
+
 
 export default function About() {
   return (
@@ -160,32 +162,55 @@ export default function About() {
           </p>
         </motion.div>
 
-        {/* Disclaimer */}
+        {/* Future Research: Audio-Based Sleep Apnea Detection */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="bg-white/70 backdrop-blur-lg rounded-2xl shadow border border-red-100 p-6 flex items-start gap-4"
+          transition={{ duration: 0.5, delay: 0.35 }}
+          className="bg-white/60 backdrop-blur-lg rounded-2xl shadow-md border border-purple-100 p-8 mb-10"
         >
-          <AlertCircle className="w-6 h-6 text-red-500 mt-1" />
-          <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-1">
-              Medical Disclaimer
-            </h3>
-            <p className="text-gray-700 text-sm leading-relaxed">
-              This platform is designed for educational and research purposes
-              only. It should <strong>not</strong> be used as a replacement for
-              professional medical advice, diagnosis, or treatment. If you
-              suspect that you may have sleep apnea or any other sleep disorder,
-              please consult a qualified healthcare provider or sleep
-              specialist.
-            </p>
+          <div className="flex items-center gap-3 mb-3">
+            <Mic className="w-7 h-7 text-purple-600" />
+            <h2 className="text-xl font-semibold text-gray-800">
+              Future Research: Audio-Based Sleep Apnea Detection
+            </h2>
           </div>
+
+          <p className="text-gray-700 leading-relaxed text-sm mb-4">
+            As a future extension of this project, we explored a{" "}
+            <strong>non-invasive and low-cost sleep apnea detection approach</strong>{" "}
+            using breathing and snoring audio signals. The method applies{" "}
+            <strong>Mel-spectrogram analysis</strong> and a{" "}
+            <strong>Convolutional Neural Network (CNN)</strong> to classify apnea and
+            normal sleep segments.
+          </p>
+
+          <p className="text-gray-700 leading-relaxed text-sm mb-4">
+            Using open datasets such as the <strong>UCD Snoring Database</strong> and
+            <strong> PhysioNet audio data</strong>, the model achieved a simulated
+            accuracy of <strong>92.4%</strong>, demonstrating the effectiveness of
+            audio-based deep learning for early sleep apnea screening.
+          </p>
+
+          <p className="text-gray-700 leading-relaxed text-sm mb-4">
+            Future improvements include larger datasets,{" "}
+            <strong>transfer learning (VGGish, YAMNet)</strong>, and real-time deployment
+            through mobile or wearable devices.
+          </p>
+
+          <a
+            href="/Research paper.pdf"
+            download
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 text-white text-xs font-medium hover:bg-purple-700 transition"
+          >
+            📄 Download Research Paper
+          </a>
         </motion.div>
+
 
         {/* Footer */}
         <div className="text-center mt-10 text-gray-500 text-sm">
-          Developed by <strong>Samrat Ghosh</strong> • B.Tech CSE (AI & ML) •{" "}
+          Developed by <strong>Samrat Ghosh & Riya Sinha</strong> • B.Tech CSE (AI & ML) •{" "}
           <a
             href="https://github.com/Samrat740/Sleep-Apnea-Detection-Using-ECG-Signals"
             target="_blank"
