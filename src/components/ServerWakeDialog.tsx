@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useServer } from '../context/ServerContext';
 
+
 export default function ServerWakeDialog() {
   const { startServer } = useServer();
   const [open, setOpen] = useState(false);

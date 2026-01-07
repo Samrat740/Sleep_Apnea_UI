@@ -56,7 +56,7 @@ export default function Header() {
             className="flex items-center gap-2 bg-gradient-to-r from-sky-400 to-blue-500 text-white text-sm font-medium px-4 py-2 rounded-lg shadow hover:opacity-90 transition"
           >
             <Beaker className="w-4 h-4" />
-            Generate
+            Sample ECG CSV
           </a>
         </nav>
       </div>
@@ -92,7 +92,7 @@ export default function Header() {
             className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-sky-400 to-blue-500 text-white text-sm font-medium px-4 py-2 rounded-lg shadow hover:opacity-90 transition"
           >
             <Beaker className="w-4 h-4" />
-            Generate Samples
+            Download Sample ECG CSV
           </a>
         </div>
       )}
